@@ -12,8 +12,8 @@
            <li><a href="create.php">ADD USER</a></li>
            <li><a href="#">ABOUT US</a></li>
            <li><a href="#">CONTACT US</a></li>
-           <li><a href="#">DESIGN</a></li>
-           <li><a href="#">HELP</a></li>
+           <li><a href="pdf.php">PDF DOC</a></li>
+           <li><a href="csv.php">DOWNLOAD</a></li>
            <li><a href="signUp.php">LOG OUT</a></li>
         </ul>
     </div>
