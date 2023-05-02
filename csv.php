@@ -7,10 +7,10 @@ header('Content-Disposition: attachment; filename="students.csv"');
 $output = fopen('php://output', 'w');
 
 // Write header row
-fputcsv($output, array('id', 'fname', 'lname','email', 'password', 'gender'));
+fputcsv($output, array('id', 'fname', 'lname','email', 'gender'));
 
 $conn = mysqli_connect('localhost', 'root', 'kayumba@', 'student_db');
-$result = mysqli_query($conn, 'SELECT * FROM users');
+$result = mysqli_query($conn, 'SELECT id,fname,lname,email,gender FROM users');
 
 
 while ($row = mysqli_fetch_assoc($result)) {

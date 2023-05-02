@@ -4,7 +4,6 @@
  $fname = "";
  $lname = "";
  $email = "";
- $password = "";
 
  $error = "";
  $success = "";
@@ -24,17 +23,20 @@
     $fname = $row["fname"];
     $lname = $row["lname"];
     $email = $row["email"];
-    $password = $row["password"];
  }else{
     $id = $_POST['id'];
     $fname = $_POST['fname'];
     $lname = $_POST["lname"];
     $email = $_POST['email'];
-    $password = $_POST["password"]; 
 
-    $sql = "update users set fname = '$fname', lname = '$lname', email = '$email', password = '$password' where id = '$id'";
+    $sql = "update users set fname = '$fname', lname = '$lname', email = '$email' where id = '$id'";
     $result = $conn->query($sql);
-    echo "Updated successfully!";
+    if ($result) {
+        header('location:index.php');
+    } else {
+        die(mysqli_error($conn));
+    }
+    
  }
 ?>
 
@@ -57,7 +59,7 @@
         </ul>
     </div>
     <h1>Update a User Here</h1>
-    <form action="edit.php" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <fieldset>
             <legend>Personal Information</legend>
             <input type="hidden" name="id" value="<?php echo $id ?>"><br>
@@ -67,8 +69,6 @@
             <input type="text" name="lname" value="<?php echo $lname ?>"><br>
             Email:<br>
             <input type="email" name="email" value="<?php echo $email ?>"><br>
-            Password:<br>
-            <input type="password" name="password" value="<?php echo $password ?>"> <br>
             Gender:<br>
             <input type="radio" name="gender" value="Male">Male
             <input type="radio" name="gender" value="female">Female<br>

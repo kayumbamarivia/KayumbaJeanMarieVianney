@@ -44,7 +44,7 @@
         </ul>
     </div>
     <h1>Add a New User</h1>
-    <form action="create.php" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <fieldset>
             <legend>Personal Information</legend>
             First Name:<br>

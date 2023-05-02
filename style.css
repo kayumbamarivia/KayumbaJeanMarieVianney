@@ -128,20 +128,6 @@ form {
   color: white; /* Set text color of active link */
 }
 
- 
-a {
-  color: #0077cc; /* Set the link color */
-  text-decoration: none; /* Remove the underline */
-}
-
-a:hover {
-  color: #005299; /* Change the link color on hover */
-  text-decoration: none; /* Add an underline on hover */
-}
-
-a:active {
-  color: #cc0000; /* Change the link color when clicked */
-}
 
 h1 {
   color: #333;
@@ -155,4 +141,21 @@ h1 {
 } 
   
   
+
+
+
+.link-edit, .link-delete {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #12cf74;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-edit:hover, .link-delete:hover {
+  background-color: #f5f5f5;
+}
+
   

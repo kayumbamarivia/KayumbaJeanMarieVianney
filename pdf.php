@@ -23,7 +23,6 @@
         <th>FIRST NAME</th>
         <th>SECOND NAME</th>
         <th>Email</th>
-        <th>PASSWORD</th>
         <th>Gender</th>
         <th>ACTIONS</th>
     </tr>
@@ -39,7 +38,6 @@
         <td><?php echo $row['fname']?></td>
         <td><?php echo $row['lname']?></td>
         <td><?php echo $row['email']?></td>
-        <td><?php echo $row['password']?></td>
         <td><?php echo $row['gender']?></td>
     </tr>
         <?php

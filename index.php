@@ -12,9 +12,9 @@
            <li><a href="create.php">ADD USER</a></li>
            <li><a href="#">ABOUT US</a></li>
            <li><a href="#">CONTACT US</a></li>
-           <li><a href="pdf.php">PDF DOC</a></li>
-           <li><a href="csv.php">DOWNLOAD</a></li>
-           <li><a href="signUp.php">LOG OUT</a></li>
+           <li><a href="pdf.php">DOWNLOAD PDF</a></li>
+           <li><a href="csv.php">DOWNLOAD EXCEL</a></li>
+           <li><a href="logout.php">LOG OUT</a></li>
         </ul>
     </div>
     <table>
@@ -24,7 +24,6 @@
                 <th>FIRST NAME</th>
                 <th>SECOND NAME</th>
                 <th>EMAIL</th>
-                <th>PASSWORD</th>
                 <th>GENDER</th>
                 <th>ACTIONS</th>
             </tr>
@@ -44,11 +43,10 @@
                <td>$row[fname]</td>
                <td>$row[lname]</td>
                <td>$row[email]</td>
-               <td>$row[password]</td>
                <td>$row[gender]</td>
                <td>
-               <a href='edit.php?id=$row[id]'>Edit</a>
-               <a href='delete.php?id=$row[id]'>Delete</a>
+               <a href='edit.php?id=$row[id]' class='link-edit'>Edit</a>
+               <a href='delete.php?id=$row[id]' class='link-delete'>Delete</a>
                </td>
              </tr>
              ";

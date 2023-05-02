@@ -32,7 +32,7 @@
 </head>
 <body>
     <h1>Signup Here</h1>
-    <form action="signUp.php" method="POST">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <fieldset>
             <legend>Personal Information</legend>
             First Name:<br>
